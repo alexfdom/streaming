@@ -210,11 +210,11 @@ if __name__ == "__main__":
 
                 logging.info("Streaming is done")
 
-# To run this script: python realtime-data-streaming/spark-jobs/spark_stream.py
+# To run this script: python realtime-data-streaming/spark-jobs/spark_cassandra.py
 # to see the Spark UI http://localhost:9090
 # and the Cassandra data, run the following command: docker exec -it cassandra cqlsh -u cassandra -p casssandra localhost 9042
 
-# spark-submit --master spark://localhost:7077 realtime-data-streaming/spark-jobs/spark_stream.py
+# spark-submit --master spark://localhost:7077 realtime-data-streaming/spark-jobs/spark_cassandra.py
 # Dependencies error:
 # The error is due to the missing dependencies in the spark-submit command. The command needs to include the necessary dependencies for the Spark job to run successfully.
-# spark-submit --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 --master spark://localhost:7077 realtime-data-streaming/spark-jobs/spark_stream.py
+# spark-submit --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 --master spark://localhost:7077 realtime-data-streaming/spark-jobs/spark_casssandra.py
